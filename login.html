@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Patient Management System</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+  </head>
+  <body>
+    <!-- navigation tabs -->
+    <div class="container pt-2">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#patient_details">Patient Details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#patient_history">Patient History/Examination</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#patient_investigations">Investigations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#patient_management">Management</a>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="tab-content bg-light">
+      <!-- patient details -->
+      <div id="patient_details" class="tab-pane fade show in active">
+        <div class="container p-2" >
+          <form class="pt-3">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="Hospital_No">Hospital Number</label>
+              <input type="text" class="form-control" id="Hospital_No" placeholder="Enter Hospital Number" >
+            </div>
+            <div class="form-group col-md-6">
+              <label for="RHC_No">RHC Number</label>
+              <input type="text" class="form-control" id="RHC_No" placeholder="Enter RHC Number" >
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label class="control-label" for="date">Date</label>
+              <input class="form-control" id="date" name="date" type="date"/>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="Clinic">Clinic</label>
+              <input type="text" class="form-control" id="Clinic" placeholder="Clinic" >
+            </div>
+          </div>
+
+          <div class="container" style="padding:15px">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label class="control-label" for="first_name">First Name</label>
+              <input type="text" class="form-control" id="first_name" name="date" placeholder="First name" type="text"/>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="last_name">Last Names</label>
+              <input type="text" class="form-control" id="last_name" placeholder="Last name" >
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label class="control-label" for="age">Age</label>
+              <input type="number" class="form-control" id="age" name="age" placeholder="Enter age" type="text"/>
+            </div>
+            <div class="form-group col-md-4">
+              <label class="control-label" for="DOB">Date of Birth</label>
+              <input class="form-control" id="DOB" name="date" type="date"/>
+            </div>
+            <div class="form-group col-md-4">
+              <label class="control-label" for="Gender">Gender</label>
+              <select class="form-control" id="gender" name="gender" placeholder="MM/DD/YYY" type="text"/>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="container" style="padding:15px">
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="Address">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label class="control-label" for="phone_number">Contact Number</label>
+              <input class="form-control" id="phone_number" placeholder="Contact Number" type="number"/>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="email_add">Email Address</label>
+              <input type="email" class="form-control" id="email_add" placeholder="email@example.com" >
+            </div>
+          </div>
+
+          <div class="container" style="padding:15px">
+          </div>
+
+          <div class="form-group row">
+              <label for="referred_by" class="col-md-2 col-form-label">Referred by:</label>
+              <div class="col-md-10">
+                <select type="text" class="form-control" id="referred_by">
+                  <option>MO-OPD</option>
+                  <option>MO-Peripheral Hospital</option>
+                  <option>GP</option>
+                  <option>Consultant</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="container" style="padding:15px">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label class="control-label" for="Weight">Weight</label>
+                <input class="form-control" id="weight" placeholder="Enter Weight (Kg)" type="number"/>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="height">Height</label>
+                <input type="number" class="form-control" id="height" placeholder="Enter Height (cm)" >
+              </div>
+              <div class="form-group col-md-4">
+                <label for="bmi">BMI</label>
+                <input type="number" class="form-control" id="bmi" placeholder="BMI" >
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-2 col-form-label" for="blood_pressure">Blood pressure</label>
+              <div class="col-md-5">
+                <input class="form-control" type="number" id="systolic_pressure" placeholder="Systolic (mm/Hg)">
+              </div>
+              <div class="col-md-5">
+                <input class="form-control" type="number" id="diastolic_pressure" placeholder="Diastolic (mm/Hg)">
+              </div>
+            </div>
+
+            <div class="container" style="padding:15px">
+            </div>
+
+            <div class="form-group row pb-4">
+              <label class="col-md-2 col-form-label" for="other_details">Other</label>
+              <div class="col-md-5">
+                <textarea class="form-control" id="other_details" rows="3" cols="80" placeholder="Other details"></textarea>
+              </div>
+              <div class="col-md-5">
+                <button type="button" class="btn btn-primary btn-lg btn-block">Enter Investigation reports</button>
+              </div>
+            </div>
+
+
+
+          </form>
+        </div>
+      </div>
+
+      <!-- patient history -->
+      <div id="patient_history" class="tab-pane fade">
+          <div class="container p-2">
+            <form class="pt-3">
+              <div class="form-group">
+                <label for="presenting_complaint">Presenting Complaint</label>
+                <textarea class="form-control" id="presenting_complaint" placeholder="Enter details here"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="history">History of current illness</label>
+                <textarea class="form-control" id="history" placeholder="Enter details here"></textarea>
+
+              </div>
+
+              <div class="form-group">
+                <label for="swollen_joints">Swollen joints/areas</label>
+                <select class="form-control" id="swollen_joints">
+                  <option>Hands PIP/MCP/Wrist joints</option>
+                  <option>Hands DIP joints</option>
+                  <option>Arms elbows</option>
+                  <option>Arms Shoulder</option>
+                  <option>Knees</option>
+                  <option>Ankles</option>
+                  <option>Feet MTP Joints</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="tender_joints">Tender joints/areas</label>
+                <select class="form-control" id="tender_joints">
+                  <option>Hands PIP/MCP/Wrist joints</option>
+                  <option>Hands DIP joints</option>
+                  <option>Arms elbows</option>
+                  <option>Arms Shoulder</option>
+                  <option>Knees</option>
+                  <option>Ankles</option>
+                  <option>Feet MTP Joints</option>
+                  <option>Neck</option>
+                  <option>Thoracic spine</option>
+                  <option>Lumbar spine</option>
+                  <option>Trochanteric bursae</option>
+                  <option>Enthesitis of feet</option>
+                  <option>Enthesitis of elbows</option>
+                  <option>Fibromyalgia trigger points</option>
+                  <option>Other</option>
+                </select>
+
+              </div>
+
+              <div class="form-group">
+                <label for="extra_articular_manifestations">Extra articular manifestations</label>
+                <select class="form-control" id="extra_articular_manifestations">
+                  <option>Oral ulcer</option>
+                  <option>Skin rash</option>
+                  <option>Psoriatic rash</option>
+                  <option>Uveitis</option>
+                  <option>Sjogrens</option>
+                  <option>Fever</option>
+                  <option>Migraine</option>
+                  <option>LOW</option>
+                  <option>LOA</option>
+                  <option>Insomnia</option>
+                  <option>Trochanteric bursae</option>
+                  <option>Thrombosis</option>
+                  <option>Other</option>
+                </select>
+
+              </div>
+
+              <div class="form-group">
+                <label for="co_morbidities">Co-morbidities</label>
+                <select class="form-control" id="co_morbidities">
+                  <option>Diabetes mellitus</option>
+                  <option>Hypertension</option>
+                  <option>Hyperlipidaemia</option>
+                  <option>CVD</option>
+                  <option>Hypothyroidism</option>
+                  <option>BA</option>
+                  <option>COPD</option>
+                  <option>Allergies</option>
+                  <option>Other</option>
+                </select>
+
+              </div>
+
+              <div class="form-group">
+                <label for="allergies">Allergies</label>
+                <textarea type="text" class="form-control" id="allergies" placeholder="Enter allergy details here"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="surgical_history">Past surgical history</label>
+                <textarea type="text" class="form-control" id="surgical_history" placeholder="Enter details here"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="family_social_history">Family/Social history</label>
+                <textarea type="text" class="form-control" id="family_social_history" placeholder="Enter details here"></textarea>
+              </div>
+              </textarea>
+
+              <div class="form-group">
+                <label for="diagnosis">Diagnosis</label>
+                <select class="form-control" id="diagnosis">
+                  <option>Spondyloarthritis - Ankylosing spondylitis, Psoriatic arthritis, Reactive Arthritis , Peripheral Spondyloarthritis, IBD associated SPA,</option>
+                  <option>Rheumatoid Arthritis</option>
+                  <option>Osteoarthritis</option>
+                  <option>Inflammatory arthritis - other types</option>
+                  <option>Enthesitis</option>
+                  <option>Systemic Lupus Erythematosus</option>
+                  <option>Juvenile Idiopathic Arthritis</option>
+                  <option>Fibromyalgia</option>
+                  <option>Backpain</option>
+                  <option>Neck pain</option>
+                  <option>Adhesive capsulitis</option>
+                  <option>Systemic sclerosis</option>
+                  <option>Mixed Connective Tissue Disease</option>
+                  <option>Myositis</option>
+                  <option>Overlap syndromes</option>
+                  <option>Polymyalgia Rheumatica</option>
+                  <option>Temporal Arteritis</option>
+                  <option>Takayasus disease</option>
+                  <option>Behçet's Disease</option>
+                  <option>ANCA associated vasculitis</option>
+                  <option>Sjögren’s Syndrome</option>
+                  <option>Anti phospholipid syndrome</option>
+                  <option>Other</option>
+
+                </select>
+
+              </div>
+
+              <div class="form-group">
+                <label for="patient_history_other_details">Other</label>
+                <textarea class="form-control" id="patient_history_other_details" rows="3" cols="80" placeholder="Other details"></textarea>
+              </div>
+
+
+
+            </form>
+
+          </div>
+
+          </div>
+
+      <!-- patient investigations -->
+      <div id="patient_investigations" class="tab-pane fade">
+        <div class="container pt-3" style="height:345px;">                                                               <!-- jumbotron row -->
+          <div class="row">
+            <div class="col-4">
+              <div class="jumbotron jumbotron-fluid mb-4" style="height:320px;">
+                <div class="container">
+                  <h1 class="display-5 pb-1">Request Investigation</h1>
+                  <p class="lead pt-5">
+                    <a class="btn btn-primary btn-lg btn-block" data-toggle="collapse"
+                    aria-expanded="false"  aria-controls="request_reports" href="#request_reports" role="button">
+                      <i class="material-icons pt-2 pr-2">swap_vert</i>Request</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4">
+              <div class="jumbotron jumbotron-fluid mb-4" style="height:320px;">
+                <div class="container">
+                  <h1 class="display-5">Enter Investigation reports</h1>
+                  <p class="lead pt-2">
+                    <a class="btn btn-primary btn-lg btn-block" href="#enter_reports" role="button"
+                    data-toggle="collapse" aria-expanded="false"  aria-controls="enter_reports">
+                      <i class="material-icons pt-2 pr-2">insert_chart</i>Enter reports</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4">
+              <div class="jumbotron jumbotron-fluid mb-4" style="height:320px;">
+                <div class="container">
+                  <h1 class="display-5 pb-2">Search previous records</h1>
+                  <p class="lead pt-5">
+                    <a class="btn btn-primary btn-lg btn-block" href="#" role="button">
+                      <i class="material-icons p-2">search</i>Search records</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- Investigation request collapse -->
+        <div class="collapse" id="request_reports">
+          <div class="container pt-0 mt-0 pb-5">
+            <div class="card card-body"  id="viewfield">
+              <h3>Select the required tests to be requested</h3>
+              <form class="pl-4">
+                    <div class="form-group">
+                      <input class="form-check-input" type="checkbox" id="FBC">
+                      <label class="form-check-label" for="FBC">
+                        FBC
+                      </label>
+                    </div>
+
+                    <div class="form-group">
+                      <input class="form-check-input" type="checkbox" id="AST_ALT">
+                      <label class="form-check-label" for="AST_ALT">
+                        AST/ALT
+                      </label>
+                    </div>
+
+                    <div class="form-group">
+                      <input class="form-check-input" type="checkbox" id="LFT">
+                      <label class="form-check-label" for="LFT">
+                        LFT
+                      </label>
+                    </div>
+
+                    <div class="form-group">
+                      <input class="form-check-input" type="checkbox" id="serum_albumin">
+                      <label class="form-check-label" for="serum_albumin">
+                        Serum Albumin
+                      </label>
+                    </div>
+
+                    <div class="form-group">
+                      <input class="form-check-input" type="checkbox" id="serum_total_protein">
+                      <label class="form-check-label" for="serum_total_protein">
+                        Serum Total Protein
+                      </label>
+                    </div>
+
+                    <div class="form-group">
+                      <input class="form-check-input" type="checkbox" id="RFT">
+                      <label class="form-check-label" for="RFT">
+                        RFT
+                      </label>
+                    </div>
+
+                    <div class="form-group">
+                      <input class="form-check-input" type="checkbox" id="serum_creatinine">
+                      <label class="form-check-label" for="serum_creatinine">
+                        Serum creatinine
+                      </label>
+                    </div>
+
+                    <div class="form-group">
+                      <input class="form-check-input" type="checkbox" id="blood_urea">
+                      <label class="form-check-label" for="blood_urea">
+                        Blood urea
+                      </label>
+                    </div>
+
+                    <div class="form-group">
+                      <input class="form-check-input" type="checkbox" id="AST_ALT">
+                      <label class="form-check-label" for="gridCheck1">
+                        AST/ALT
+                      </label>
+                    </div>
+
+                    <div class="form-group">
+                      <input class="form-check-input" type="checkbox" id="ESR">
+                      <label class="form-check-label" for="ESR">
+                        ESR
+                      </label>
+                    </div>
+
+                    <div class="form-group">
+                      <input class="form-check-input" type="checkbox" id="CRP">
+                      <label class="form-check-label" for="CRP">
+                        CRP
+                      </label>
+                    </div>
+
+                    <div class="form-group">
+                      <input class="form-check-input" type="checkbox" id="serum_electrolyte">
+                      <label class="form-check-label" for="serum_electrolyte">
+                        Serum electrolyte (Na, K)
+                      </label>
+                    </div>
+
+                    <div class="form-group">
+                      <button type="button" class="btn btn-success btn-lg" name="button">Request selected tests</button>
+                    </div>
+                  </form>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Enter investigation reports collapse -->
+        <div class="collapse" id="enter_reports">
+          <div class="card card-body">
+            <div class="container pt-0 mt-0 pb-5">
+              <div class="card card-body"  id="viewfield">
+                <h3>Enter investigation data</h3>
+
+                <!-- section 1 FBC -->
+                <div class="card card-body">
+                  <h5>1. FBC</h5>
+                  <form class="" action="index.html" method="post">
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="hemoglobin">Hemoglobin</label>
+                          <input type="number" class="form-control" id="hemoglobin" placeholder="Hemoglobin (g/dL)">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="platelet">Platelet</label>
+                          <input type="number" class="form-control" id="platelet" placeholder="Platelet (10⁹/dL)">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="wbc_total">WBC Total</label>
+                          <input type="number" class="form-control" id="wbc_total" placeholder="WBC Total (10⁹/dL)">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="red_blood_cells">Red Bool Cells</label>
+                          <input type="number" class="form-control" id="red_blood_cells" placeholder="Red blood cells (10¹²/dL)">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="mean_cell_volume">Mean Cell Volume</label>
+                          <input type="number" class="form-control" id="mean_cell_volume" placeholder="Mean cell volume (fl)">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="haematocrit">Haematocrit</label>
+                          <input type="number" class="form-control" id="haematocrit" placeholder="Haematocrit (L/L %)">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="mean_cell_haemoglobin">Mean Cell Haemoglobin</label>
+                          <input type="number" class="form-control" id="mean_cell_haemoglobin" placeholder="Mean cell Haemoglobin (pg)">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="m_c_h_concentration">M.C.H Concentration</label>
+                          <input type="number" class="form-control" id="m_c_h_concentration" placeholder="M.C.H Concentration (g/dL)">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="form-group">
+                          <label for="red_cell_distribution_width">Red Cell Distribution Width</label>
+                          <input type="number" class="form-control" id="red_cell_distribution_width" placeholder="Red Cell Distribution Width (%)">
+                        </div>
+                      </div>
+                    </div>
+
+                    <h3>
+                      <small class="text-muted"><u>Differential Count</u></small>
+                    </h3>
+
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="neutrophils">Neutrophils</label>
+                          <input type="number" class="form-control" id="neutrophils" placeholder="Neutrophils (%)">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="lymphocytes">Lymphocytes</label>
+                          <input type="number" class="form-control" id="lymphocytes" placeholder="Lymphocytes (%)">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="monocytes">Monocytes</label>
+                          <input type="number" class="form-control" id="monocytes" placeholder="Monocytes (%)">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="eosinophils">Eosinophils</label>
+                          <input type="number" class="form-control" id="eosinophils" placeholder="Eosinophils (%)">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="basophils">Basophils</label>
+                          <input type="number" class="form-control" id="basophils" placeholder="Basophils (%)">
+                        </div>
+                      </div>
+                    </div>
+
+                  </form>
+
+                </div>
+                <div class="pb-2"></div>
+
+                <!-- section 2 LFT -->
+                <div class="card card-body">
+                  <h3>2. LFT</h3>
+
+                  <form class="" action="index.html" method="post">
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="ALT_SGPT">ALT (S.G.P.T)</label>
+                          <input type="number" class="form-control" id="ALT_SGPT" placeholder="ALT (S.G.P.T) (U/L)">
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="AST">AST (S.G.O.T)</label>
+                          <input type="number" class="form-control" id="AST" placeholder="AST (S.G.O.T) (U/L)">
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="total_protein">Total Protein</label>
+                          <input type="number" class="form-control" id="total_protein" placeholder="Total Protein (g/dL)">
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="albumin">Albumin</label>
+                          <input type="number" class="form-control" id="albumin" placeholder="Albumin (g/dL)">
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="globulin">Globulin</label>
+                          <input type="number" class="form-control" id="globulin" placeholder="Globulin (g/dL)">
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="AG_Ratio">A/G Ratio</label>
+                          <input type="number" class="form-control" id="AG_Ratio" placeholder="A/G Ratio">
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="bilirubin">Bilirubin Total</label>
+                          <input type="number" class="form-control" id="bilirubin" placeholder="Bilirubin Total (mg/dL)">
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="alk_phosphatase">ALK. Phosphatase</label>
+                          <input type="number" class="form-control" id="alk_phosphatase" placeholder="ALK. Phosphatase (U/L)">
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="form-group">
+                          <label for="gamma_gt">Gamma-GT</label>
+                          <input type="number" class="form-control" id="gamma_gt" placeholder="Gamma-GT (U/L)">
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="pb-2"></div>
+
+                <!-- section 3 and 4 -->
+                <!-- section 3 CRP -->
+                <div class="row">
+                  <div class="col-6">
+                    <form class="" action="index.html" method="post">
+                      <div class="card card-body">
+                        <div class="form-group">
+                          <label for="crp"><h3>3. CRP</h3></label>
+                          <input type="number" class="form-control" id="crp" placeholder="CRP (mg/dL)">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- section 4 ESR -->
+                  <div class="col-6">
+                    <form class="" action="index.html" method="post">
+                      <div class="card card-body">
+                        <div class="form-group">
+                          <label for="esr"><h3>4. ESR</h3></label>
+                          <input type="number" class="form-control" id="esr" placeholder="ESR (mm/hr)">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="pb-2"></div>
+
+                <!-- section 5 RST -->
+                <div class="card card-body">
+                  <form class="" action="index.html" method="post">
+                    <h3>5. RFT</h3>
+                    <div class="form-group row">
+                      <div class="col-md-6">
+                        <label for="s_creatinine">S. Creatinine</label>
+                        <input type="number" class="form-control" id="s_creatinine" placeholder="S. Creatinine">
+                      </div>
+                      <div class="col-md-3">
+                        <label for="s_creatinine_unit"></label>
+                        <select id="s_creatinine_unit" class="form-control">
+                          <option selected>Choose units</option>
+                          <option>mg/dL</option>
+                          <option>μmol/L</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <div class="col-md-6">
+                        <label for="bloo_urea">Blood Urea</label>
+                        <input type="number" class="form-control" id="bloo_urea" placeholder="Blood Urea">
+                      </div>
+                      <div class="col-md-3 pt-2">
+                        <label for="bloo_urea"></label>
+                        <select id="blood_urea_unit" class="form-control">
+                          <option selected>Choose units</option>
+                          <option>mg/dL</option>
+                          <option>mmol/L</option>
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+
+                </div>
+                <div class="pb-2"></div>
+
+                <!-- section 6 Fasting blood sugar -->
+                <div class="card card-body">
+                  <form class="" action="index.html" method="post">
+                    <h3>6. Fasting Blood Sugar</h3>
+                    <div class="form-group row">
+                      <div class="col-md-6">
+
+                        <input type="number" class="form-control" id="fasting_blood_sugar" placeholder="Fasting Blood Sugar">
+                      </div>
+                      <div class="col-md-3">
+
+                        <select id="fasting_blood_sugar_unit" class="form-control">
+                          <option selected>Choose units</option>
+                          <option>mg/dL</option>
+                          <option>mmol/L</option>
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+
+                </div>
+                <div class="pb-2"></div>
+
+                <!-- section 7 Serum electrolytes -->
+                <div class="card card-body">
+                  <form class="" action="index.html" method="post">
+                    <h3>7. Serum Electrolytes</h3>
+                    <div class="form-group row">
+                      <div class="col-md-6">
+                        <label for="sodium">Na⁺</label>
+                        <input type="number" class="form-control" id="sodium" placeholder="Na⁺ (mmol/L)">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="potasium">K⁺</label>
+                        <input type="number" class="form-control" id="potasium" placeholder="K⁺ (mmol/L)">
+                      </div>
+
+                    </div>
+
+                  </form>
+
+                </div>
+                <div class="pb-2"></div>
+
+                <!-- section 8 Serum Calcium -->
+                <div class="card card-body">
+                  <form class="" action="index.html" method="post">
+                    <h3>8. Serum Calcium</h3>
+                    <div class="form-group row">
+                      <div class="col-md-6">
+                        <input type="number" class="form-control" id="s_creatinine" placeholder="Serum Calcium">
+                      </div>
+                      <div class="col-md-3 ">
+                        <select id="serum_calcium_unit" class="form-control">
+                          <option selected>Choose units</option>
+                          <option>mg/dL</option>
+                          <option>mmol/L</option>
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+
+
+
+
+                </div>
+                <div class="pb-2"></div>
+
+                <!-- section 9 Screening test -->
+                <div class="card card-body">
+                  <form class="" action="index.html" method="post">
+
+                    <div class="row">
+                      <div class="col-6">
+                        <h3>9. Screening Test for Biologics</h3>
+                      </div>
+
+                    <div class="col-4">
+                      <!-- Rectangular switch -->
+                      <label class="switch">
+                        <input type="checkbox" data-toggle="collapse" data-target="#screening_test" aria-expanded="true" aria-controls="screening_test">
+                        <span class="slider"></span>
+                      </label>
+                    </div>
+                    </div>
+
+                    <div class="collapse" id="screening_test">
+                      <div class="form-group row">
+                        <div class="col-md-6">
+                          <label class="control-label" for="date">Date done</label>
+                          <input class="form-control" id="date" name="date" type="date"/>
+                        </div>
+                      </div>
+
+                      <form class="" action="index.html" method="post">
+                        <div class="form-group row">
+                          <div class="col-4">
+                            <label for="2d_echo">i. 2D echo</label>
+                            <select id="2d_echo" class="form-control">
+                              <option selected>Select</option>
+                              <option>Normal</option>
+                              <option>Abnormal</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6 pt-2">
+                            <textarea id="2d_echo_findings" class="form-control" rows="2" placeholder="Findings"></textarea>
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <div class="col-4">
+                            <label for="hiv_screening">ii. HIV Screening</label>
+                            <select id="hiv_screening" class="form-control">
+                              <option selected>Select</option>
+                              <option>Positive</option>
+                              <option>Negative</option>
+                            </select>
+                          </div>
+                          <div class="col-4">
+                            <label for="tb_screening">iii. Tb Screening</label>
+                            <select id="2d_echo" class="form-control">
+                              <option selected>Select</option>
+                              <option>Positive</option>
+                              <option>Negative</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <div class="col-4">
+                            <label for="hpeb">iv. HPE B</label>
+                            <select id="hpeb" class="form-control">
+                              <option selected>Select</option>
+                              <option>Positive</option>
+                              <option>Negative</option>
+                            </select>
+                          </div>
+                          <div class="col-4">
+                            <label for="hpec">v. HPE C</label>
+                            <select id="hpec" class="form-control">
+                              <option selected>Select</option>
+                              <option>Positive</option>
+                              <option>Negative</option>
+                            </select>
+                          </div>
+                        </div>
+
+                      </form>
+                    </div>
+
+
+
+
+                  </form>
+
+
+
+
+                </div>
+                <div class="pb-2"></div>
+
+
+                <!-- section 10 upload images -->
+
+                <div class="card card-body">
+                  <form class="" action="index.html" method="post">
+                    <h3>Imaging studies</h3>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="row">
+                          <div class="col-3">
+                            <label for="xray">1. X-Ray</label>
+                          </div>
+                          <div class="col-9">
+                            <textarea name="xray" rows="1" placeholder="Enter findings here"></textarea>
+                          </div>
+                        </div>
+                      <div class="row">
+                        <div class="col-3">
+                          <label for="ct_details">2. CT</label>
+                        </div>
+                        <div class="col-9">
+                          <textarea name="ct_details" rows="1" placeholder="Enter findings here"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-3">
+                      <button type="button" name="button">Upload Image</button>
+                    </div>
+
+                  </div>
+
+
+
+                  </form>
+
+
+
+
+                </div>
+
+
+            </div>
+          </div>
+
+          </div>
+
+
+
+
+      </div>
+      </div>
+
+      <!-- patient management -->
+      <div id="patient_management" class="tab-pane fade">
+        <div class="container p-3">
+          <div class="row">
+            <div class="col-md-6">
+
+              <h3 class="pb-1">Pain relief</h3>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="PCM_checkbox">
+                    <label class="form-check-label col-md-6" for="PCM_dosage">
+                      PCM <select class="form-control " id="PCM_dosage">
+                        <option>500 bd</option>
+                        <option>500 tds</option>
+                        <option>1 gram bd</option>
+                        <option>1 gram tds</option>
+                      </select>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-check pt-2">
+                    <input class="form-check-input" type="checkbox" id="diclofenac_checkbox">
+                    <label class="form-check-label col-md-6" for="diclofenac_dosage">
+                      Diclofenac <select class="form-control" id="diclofenac_dosage">
+                        <option>50 bd</option>
+                        <option>50 tds</option>
+                      </select>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-md-6">
+              <div class="container">
+                <div class="form-group">
+                  <label for="history"><h3>Referrals</h3></label>
+                  <textarea class="form-control " id="referrals" rows="4" placeholder="Enter referral details here"></textarea>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="ibuprofen_checkbox">
+                <label class="form-check-label col-md-6" for="ibuprofen_dosage">
+                  Ibuprofen <select class="form-control" id="ibuprofen_dosage">
+                    <option>200 bd</option>
+                    <option>400 bd</option>
+                    </select>
+                </label>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-check pt-2">
+                      <input class="form-check-input" type="checkbox" id="celecoxib_checkbox">
+                      <label class="form-check-label col-md-6" for="celocoxib_dosage">
+                        Celecoxib <select class="form-control" id="celocoxib_dosage">
+                          <option>100 bd</option>
+                          <option>200 bd</option>
+                          </select>
+                      </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="container">
+                <h3>Review</h3>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="by_mo_checkbox">
+                  <label class="form-check-label col-md-6" for="by_mo_label">
+                    By MO <select class="form-control" id="by_mo_label">
+                      <option>2 months</option>
+                      <option>6 weeks</option>
+                      <option>4 weeks</option>
+                      <option>2 weeks</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="form-check pt-2">
+                  <input class="form-check-input" type="checkbox" id="by_consultant_checkbox">
+                  <label class="form-check-label col-md-6" for="by_consultant_label">
+                    By Consultant <select class="form-control" id="by_consultant_label">
+                      <option>2 months</option>
+                      <option>6 weeks</option>
+                      <option>4 weeks</option>
+                      <option>2 weeks</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              <h3 class="pb-1">DMARDS</h3>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="methotrexate_checkbox">
+                <label class="form-check-label col-md-6" for="methotrexate_dosage">
+                  Methotrexate on Sundays <select class="form-control" id="methotrexate_dosage">
+                    <option>5 mg</option>
+                    <option>7.5 mg</option>
+                    <option>10 mg</option>
+                    <option>12.5 mg</option>
+                    <option>15 mg</option>
+                    <option>17.5 mg</option>
+                    <option>20 mg</option>
+                  </select>
+                </label>
+              </div>
+              <div class="form-check pt-2">
+                <input class="form-check-input" type="checkbox" id="folic_acid_checkbox">
+                <label class="form-check-label col-md-6" for="folic_acid_dosage">
+                  Folic Acid on Wednesdays <select class="form-control" id="folic_acid_dosage">
+                    <option>5 mg</option>
+
+                  </select>
+                </label>
+              </div>
+              <div class="form-check pt-2">
+                <input class="form-check-input" type="checkbox" id="sulfasalazine_checkbox">
+                <label class="form-check-label col-md-6" for="sulfasalazine_dosage">
+                  Sulfasalazine <select class="form-control" id="sulfasalazine_dosage">
+                    <option>500mg daily</option>
+                    <option>500 bd</option>
+                    <option>500 tds</option>
+                    <option>1 gram bd</option>
+                    <option>1 gram tds</option>
+                    </select>
+                </label>
+              </div>
+            </div>
+            <div class="col-6 pt-3">
+              <div class="container">
+                <div class="form-group">
+                  <label for="notes"><h3>Notes</h3></label>
+                  <textarea class="form-control" id="notes" rows="5" placeholder="Enter notes here"></textarea>
+                </div>
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-check pt-2">
+                <input class="form-check-input" type="checkbox" id="leflunomide_nocte_checkbox">
+                <label class="form-check-label col-md-6" for="leflunomide_nocte_dosage">
+                  Leflunomide nocte <select class="form-control" id="leflunomide_nocte_dosage">
+                    <option>10 mg</option>
+                    <option>20 mg</option>
+                    </select>
+                </label>
+              </div>
+              <div class="form-check pt-2">
+                <input class="form-check-input" type="checkbox" id="azathioprine_daily_checkbox">
+                <label class="form-check-label col-md-6" for="azathioprine_daily_dosage">
+                  Azathioprine daily <select class="form-control" id="azathioprine_daily_dosage">
+                    <option>50</option>
+                    <option>75</option>
+                    <option>100</option>
+                    <option>125</option>
+                    <option>150</option>
+                    </select>
+                </label>
+              </div>
+              <div class="form-check pt-2">
+                <input class="form-check-input" type="checkbox" id="hydroxychloroquine_checkbox">
+                <label class="form-check-label col-md-6" for="hydroxychloroquine_dosage">
+                  Hydroxychloroquine <select class="form-control" id="hydroxychloroquine_dosage">
+                    <option>200mg bd Monday to Friday</option>
+                    <option>200mg daily all 7 days</option>
+                    <option>200mg daily Monday to Friday</option>
+                    <option>200mg bd all seven days</option>
+                    </select>
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="prednisolone_checkbox">
+                <label class="form-check-label col-md-6" for="prednisolone_dosage">
+                  Prednisolone<select class="form-control" id="prednisolone_dosage">
+                    <option>5 mg mane</option>
+                    <option>7.5 mg mane</option>
+                    <option>10 mg mane</option>
+                    <option>12.5 mg mane</option>
+                    <option>15 mg mane</option>
+                    <option>17.5 mg mane</option>
+                    <option>20 mg mane</option>
+                  </select>
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="methylprednisolone_checkbox">
+                <label class="form-check-label col-md-6" for="methylprednisolone_dosage">
+                  Methylprednisolone<select class="form-control" id="methylprednisolone_dosage">
+                    <option>2 mg mane</option>
+                    <option>4 mg mane</option>
+                    <option>8 mg mane</option>
+                    <option>16 mg mane</option>
+                  </select>
+                </label>
+              </div>
+
+              <h3 class="pb-1 pt-3">Other medication</h3>
+              <div class="form-group">
+                <textarea class="form-control col-md-10" id="history" placeholder="Enter other medication/dosages here"></textarea>
+              </div>
+
+
+            </div>
+
+            <div class="col-md-6 pl-4">
+              <div class="row pl-4">
+                <button type="button" class="btn btn-primary btn-lg col-md-6"><i class="material-icons pr-3 ">save_alt</i>Save record</button>
+              </div>
+              <div class="row pt-3 pl-4">
+                <button type="button" class="btn btn-primary btn-lg col-md-6"><i class="material-icons pr-3">print</i>Print record</button>
+              </div>
+              <div class="row pt-3 pl-4">
+                <button type="button" class="btn btn-primary btn-lg col-md-6"><i class="material-icons pr-2">import_export</i>Export record</button>
+              </div>
+              <div class="row pl-4 pt-3">
+                <button type="button" class="btn btn-outline-danger btn-lg col-md-6"><i class="material-icons pr-2">sync_problem</i>Reset values</button>
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      </div>
+
+  </body>
+</html>

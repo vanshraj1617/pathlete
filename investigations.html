@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <title>Patient History</title>
+  </head>
+  <body>
+    <div class="card card-body">
+      <div class="container pt-0 mt-0 pb-5">
+        <div class="card card-body"  id="viewfield">
+          <h3>Enter investigation data</h3>
+
+          <!-- section 1 FBC -->
+          <div class="card card-body">
+            <h5>1. FBC</h5>
+            <form class="" action="index.html" method="post">
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="hemoglobin">Hemoglobin</label>
+                    <input type="number" class="form-control" id="hemoglobin" placeholder="Hemoglobin (g/dL)">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="platelet">Platelet</label>
+                    <input type="number" class="form-control" id="platelet" placeholder="Platelet (10⁹/dL)">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="wbc_total">WBC Total</label>
+                    <input type="number" class="form-control" id="wbc_total" placeholder="WBC Total (10⁹/dL)">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="red_blood_cells">Red Bool Cells</label>
+                    <input type="number" class="form-control" id="red_blood_cells" placeholder="Red blood cells (10¹²/dL)">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="mean_cell_volume">Mean Cell Volume</label>
+                    <input type="number" class="form-control" id="mean_cell_volume" placeholder="Mean cell volume (fl)">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="haematocrit">Haematocrit</label>
+                    <input type="number" class="form-control" id="haematocrit" placeholder="Haematocrit (L/L %)">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="mean_cell_haemoglobin">Mean Cell Haemoglobin</label>
+                    <input type="number" class="form-control" id="mean_cell_haemoglobin" placeholder="Mean cell Haemoglobin (pg)">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="m_c_h_concentration">M.C.H Concentration</label>
+                    <input type="number" class="form-control" id="m_c_h_concentration" placeholder="M.C.H Concentration (g/dL)">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="red_cell_distribution_width">Red Cell Distribution Width</label>
+                    <input type="number" class="form-control" id="red_cell_distribution_width" placeholder="Red Cell Distribution Width (%)">
+                  </div>
+                </div>
+              </div>
+
+              <h3>
+                <small class="text-muted"><u>Differential Count</u></small>
+              </h3>
+
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="neutrophils">Neutrophils</label>
+                    <input type="number" class="form-control" id="neutrophils" placeholder="Neutrophils (%)">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="lymphocytes">Lymphocytes</label>
+                    <input type="number" class="form-control" id="lymphocytes" placeholder="Lymphocytes (%)">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="monocytes">Monocytes</label>
+                    <input type="number" class="form-control" id="monocytes" placeholder="Monocytes (%)">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="eosinophils">Eosinophils</label>
+                    <input type="number" class="form-control" id="eosinophils" placeholder="Eosinophils (%)">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="basophils">Basophils</label>
+                    <input type="number" class="form-control" id="basophils" placeholder="Basophils (%)">
+                  </div>
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+          <div class="pb-2"></div>
+
+          <!-- section 2 LFT -->
+          <div class="card card-body">
+            <h3>2. LFT</h3>
+
+            <form class="" action="index.html" method="post">
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="ALT_SGPT">ALT (S.G.P.T)</label>
+                    <input type="number" class="form-control" id="ALT_SGPT" placeholder="ALT (S.G.P.T) (U/L)">
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="form-group">
+                    <label for="AST">AST (S.G.O.T)</label>
+                    <input type="number" class="form-control" id="AST" placeholder="AST (S.G.O.T) (U/L)">
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="total_protein">Total Protein</label>
+                    <input type="number" class="form-control" id="total_protein" placeholder="Total Protein (g/dL)">
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="form-group">
+                    <label for="albumin">Albumin</label>
+                    <input type="number" class="form-control" id="albumin" placeholder="Albumin (g/dL)">
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="globulin">Globulin</label>
+                    <input type="number" class="form-control" id="globulin" placeholder="Globulin (g/dL)">
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="form-group">
+                    <label for="AG_Ratio">A/G Ratio</label>
+                    <input type="number" class="form-control" id="AG_Ratio" placeholder="A/G Ratio">
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="bilirubin">Bilirubin Total</label>
+                    <input type="number" class="form-control" id="bilirubin" placeholder="Bilirubin Total (mg/dL)">
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="form-group">
+                    <label for="alk_phosphatase">ALK. Phosphatase</label>
+                    <input type="number" class="form-control" id="alk_phosphatase" placeholder="ALK. Phosphatase (U/L)">
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="gamma_gt">Gamma-GT</label>
+                    <input type="number" class="form-control" id="gamma_gt" placeholder="Gamma-GT (U/L)">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="pb-2"></div>
+
+          <!-- section 3 and 4 -->
+          <!-- section 3 CRP -->
+          <div class="row">
+            <div class="col-6">
+              <form class="" action="index.html" method="post">
+                <div class="card card-body">
+                  <div class="form-group">
+                    <label for="crp"><h3>3. CRP</h3></label>
+                    <input type="number" class="form-control" id="crp" placeholder="CRP (mg/dL)">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- section 4 ESR -->
+            <div class="col-6">
+              <form class="" action="index.html" method="post">
+                <div class="card card-body">
+                  <div class="form-group">
+                    <label for="esr"><h3>4. ESR</h3></label>
+                    <input type="number" class="form-control" id="esr" placeholder="ESR (mm/hr)">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="pb-2"></div>
+
+          <!-- section 5 RST -->
+          <div class="card card-body">
+            <form class="" action="index.html" method="post">
+              <h3>5. RFT</h3>
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <label for="s_creatinine">S. Creatinine</label>
+                  <input type="number" class="form-control" id="s_creatinine" placeholder="S. Creatinine">
+                </div>
+                <div class="col-md-3">
+                  <label for="s_creatinine_unit"></label>
+                  <select id="s_creatinine_unit" class="form-control">
+                    <option selected>Choose units</option>
+                    <option>mg/dL</option>
+                    <option>μmol/L</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <label for="bloo_urea">Blood Urea</label>
+                  <input type="number" class="form-control" id="bloo_urea" placeholder="Blood Urea">
+                </div>
+                <div class="col-md-3 pt-2">
+                  <label for="bloo_urea"></label>
+                  <select id="blood_urea_unit" class="form-control">
+                    <option selected>Choose units</option>
+                    <option>mg/dL</option>
+                    <option>mmol/L</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+
+          </div>
+          <div class="pb-2"></div>
+
+          <!-- section 6 Fasting blood sugar -->
+          <div class="card card-body">
+            <form class="" action="index.html" method="post">
+              <h3>6. Fasting Blood Sugar</h3>
+              <div class="form-group row">
+                <div class="col-md-6">
+
+                  <input type="number" class="form-control" id="fasting_blood_sugar" placeholder="Fasting Blood Sugar">
+                </div>
+                <div class="col-md-3">
+
+                  <select id="fasting_blood_sugar_unit" class="form-control">
+                    <option selected>Choose units</option>
+                    <option>mg/dL</option>
+                    <option>mmol/L</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+
+          </div>
+          <div class="pb-2"></div>
+
+          <!-- section 7 Serum electrolytes -->
+          <div class="card card-body">
+            <form class="" action="index.html" method="post">
+              <h3>7. Serum Electrolytes</h3>
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <label for="sodium">Na⁺</label>
+                  <input type="number" class="form-control" id="sodium" placeholder="Na⁺ (mmol/L)">
+                </div>
+                <div class="col-md-6">
+                  <label for="potasium">K⁺</label>
+                  <input type="number" class="form-control" id="potasium" placeholder="K⁺ (mmol/L)">
+                </div>
+
+              </div>
+
+            </form>
+
+          </div>
+          <div class="pb-2"></div>
+
+          <!-- section 8 Serum Calcium -->
+          <div class="card card-body">
+            <form class="" action="index.html" method="post">
+              <h3>8. Serum Calcium</h3>
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <input type="number" class="form-control" id="s_creatinine" placeholder="Serum Calcium">
+                </div>
+                <div class="col-md-3 ">
+                  <select id="serum_calcium_unit" class="form-control">
+                    <option selected>Choose units</option>
+                    <option>mg/dL</option>
+                    <option>mmol/L</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+
+
+
+
+          </div>
+          <div class="pb-2"></div>
+
+          <!-- section 9 Screening test -->
+          <div class="card card-body">
+            <form class="" action="index.html" method="post">
+
+              <div class="row">
+                <div class="col-6">
+                  <h3>9. Screening Test for Biologics</h3>
+                </div>
+
+              <div class="col-4">
+                <!-- Rectangular switch -->
+                <label class="switch">
+                  <input type="checkbox" data-toggle="collapse" data-target="#screening_test" aria-expanded="true" aria-controls="screening_test">
+                  <span class="slider"></span>
+                </label>
+              </div>
+              </div>
+
+              <div class="collapse" id="screening_test">
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <label class="control-label" for="date">Date done</label>
+                    <input class="form-control" id="date" name="date" type="date"/>
+                  </div>
+                </div>
+
+                <form class="" action="index.html" method="post">
+                  <div class="form-group row">
+                    <div class="col-4">
+                      <label for="2d_echo">i. 2D echo</label>
+                      <select id="2d_echo" class="form-control">
+                        <option selected>Select</option>
+                        <option>Normal</option>
+                        <option>Abnormal</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6 pt-2">
+                      <textarea id="2d_echo_findings" class="form-control" rows="2" placeholder="Findings"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-4">
+                      <label for="hiv_screening">ii. HIV Screening</label>
+                      <select id="hiv_screening" class="form-control">
+                        <option selected>Select</option>
+                        <option>Positive</option>
+                        <option>Negative</option>
+                      </select>
+                    </div>
+                    <div class="col-4">
+                      <label for="tb_screening">iii. Tb Screening</label>
+                      <select id="2d_echo" class="form-control">
+                        <option selected>Select</option>
+                        <option>Positive</option>
+                        <option>Negative</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-4">
+                      <label for="hpeb">iv. HPE B</label>
+                      <select id="hpeb" class="form-control">
+                        <option selected>Select</option>
+                        <option>Positive</option>
+                        <option>Negative</option>
+                      </select>
+                    </div>
+                    <div class="col-4">
+                      <label for="hpec">v. HPE C</label>
+                      <select id="hpec" class="form-control">
+                        <option selected>Select</option>
+                        <option>Positive</option>
+                        <option>Negative</option>
+                      </select>
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+
+
+
+
+            </form>
+
+
+
+
+          </div>
+          <div class="pb-2"></div>
+
+
+
+      </div>
+    </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
